@@ -27,18 +27,26 @@
     props.container.style[spl[0]] = spl[1];
   };
 
+
   const setCaption = (atr) => {
-    //Формируем заголовки как в CSS, а не в JS
-    switch (atr) {
-      case "display":
-        return atr + ": ";
-      case "flexDirection":
-        return "flex-direction" + ": ";
-      //закончить!!!  
-      default:
-        return atr;
-    }
-  };
+  // Формируем заголовки как в CSS, а не в JS
+  switch (atr) {
+    case "display":
+      return "display: ";
+    case "flexDirection":
+      return "flex-direction: ";
+    case "justifyContent":
+      return "justify-content: ";
+    case "alignItems":
+      return "align-items: ";
+    case "flexWrap":
+      return "flex-wrap: ";
+    case "alignContent":
+      return "align-content: ";
+    default:
+      return atr + ": "; // Для всех остальных свойств, если они есть
+  }
+};
 
 </script>
 <!-- все select'ы строятся из коллекции flexOptions -->

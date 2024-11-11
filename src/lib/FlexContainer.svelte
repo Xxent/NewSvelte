@@ -18,7 +18,7 @@
 
     onMount(() => {
         //передаем ссылку на флекс-контейнер родителю (т.е. App)
-        flexContEl = flex_container;
+        flexContEl = flex_container;         
     });
 
     function setActive(idx, ev) {
